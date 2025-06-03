@@ -1,4 +1,6 @@
-@csrf
+@php
+    $task = $task ?? null;
+@endphp
 
 <div class="mb-3">
     <label for="name" class="form-label">Nazwa zadania <span class="text-danger">*</span></label>
@@ -88,7 +90,7 @@
         type="date"
         name="due_date"
         id="due_date"
-        value="{{ old('due_date', optional($task->due_date)->format('Y-m-d')) }}"
+        value="{{ old('due_date', optional($task?->due_date)->format('Y-m-d')) }}"
         class="form-control @error('due_date') is-invalid @enderror"
         required
         min="{{ now()->format('Y-m-d') }}"
@@ -100,7 +102,7 @@
 
 <div class="d-flex justify-content-between">
     <button type="submit" class="btn btn-primary">
-        {{ isset($task) ? 'Aktualizuj' : 'Dodaj zadanie' }}
+        {{ isset($task) && $task ? 'Aktualizuj' : 'Dodaj zadanie' }}
     </button>
     <a href="{{ route('tasks.index') }}" class="btn btn-outline-secondary">Anuluj</a>
 </div>
