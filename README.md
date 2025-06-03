@@ -1,3 +1,7 @@
+Dane logowania do testowego usera: <br>
+email: user@example.com <br>
+password: 123456789
+
 ## 🚀 Start projektu od zera
 
 ### 1. Sklonuj repozytorium
@@ -48,13 +52,7 @@ php artisan migrate
 
 ```
 
-### 8. Wyjdź z kontenera
-
-```bash
-exit
-```
-
-### 9. Zainstaluj zależności JavaScript na hoście
+### 8. Zainstaluj zależności JavaScript na hoście
 
 Upewnij się, że masz zainstalowane Node.js i npm:
 
@@ -64,7 +62,7 @@ npm run build
 
 ```
 
-### 10. Otwórz przeglądarkę:
+### 9. Otwórz przeglądarkę:
 
 ```text
 http://localhost:8000/tasks
