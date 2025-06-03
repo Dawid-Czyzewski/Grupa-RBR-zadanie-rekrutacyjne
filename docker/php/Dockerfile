@@ -14,4 +14,4 @@ RUN composer install
 
 RUN chown -R www-data:www-data /var/www
 
-CMD php artisan migrate:fresh --seed && php-fpm
+CMD ["php-fpm"]
