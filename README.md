@@ -52,7 +52,7 @@ php artisan migrate
 
 ```
 
-### 8. Zainstaluj zależności JavaScript na hoście
+### 8. Zainstaluj zależności JavaScript
 
 Upewnij się, że masz zainstalowane Node.js i npm:
 
