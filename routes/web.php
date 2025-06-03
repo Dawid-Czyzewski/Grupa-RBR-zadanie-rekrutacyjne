@@ -7,7 +7,8 @@ use Illuminate\Support\Facades\Route;
 require __DIR__ . '/auth.php';
 
 Route::redirect('/', '/tasks');
-Route::redirect('/dashboard', '/tasks');
+
+Route::redirect('/dashboard', '/tasks')->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::prefix('tasks')->name('tasks.')->group(function () {
