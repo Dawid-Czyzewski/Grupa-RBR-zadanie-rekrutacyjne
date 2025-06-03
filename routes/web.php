@@ -6,6 +6,9 @@ use Illuminate\Support\Facades\Route;
 
 require __DIR__ . '/auth.php';
 
+Route::redirect('/', '/tasks');
+Route::redirect('/dashboard', '/tasks');
+
 Route::middleware('auth')->group(function () {
     Route::prefix('tasks')->name('tasks.')->group(function () {
         Route::get('/', [TaskController::class, 'index'])->name('index');
